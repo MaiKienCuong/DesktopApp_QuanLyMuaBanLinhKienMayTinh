@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn sử dụng</title>
+    <link rel="stylesheet" href="../bs/bootstrap.min.css">
+    <style>
+        .title-hdsd {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            text-align: center;
+            flex-direction: column;
+
+        }
+
+        .container {
+            max-width: 1600px;
+        }
+
+        .spe {
+            background-color: #dddddd;
+            border-bottom: 1px solid black;
+        }
+
+        .nav-link {
+            color: black;
+        }
+
+        .nav-link:hover {
+            color: red;
+
+        }
+
+        .title-inside {
+            font-size: 30px;
+            font-weight: bold;
+
+        }
+
+        .ql-li {
+            margin-left: 25px;
+            border-left: 2px solid red;
+        }
+
+        #qlul {
+            display: none;
+        }
+
+        .img-in-main {
+            width: 100%;
+            height: 70%;
+        }
+
+        .h1-title-main {
+            display: flex;
+            margin-left: 30%;
+
+        }
+
+        .chung {
+            display: flex;
+            flex-direction: column;
+        }
+        .blockS {
+            display: block;
+            width: 100%;
+           height: 100px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="title-hdsd">
+            <div>Hướng dẫn sử dụng</div>
+            <div>Phần mềm quản lý cửa hàng linh kiện điện tử Thành Đạt</div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-3  ">
+                <ul class="nav flex-column">
+                    <li class="nav-item spe">
+                        <a class="nav-link " href="../html/main.html">Giới thiệu phần mềm</a>
+                    </li>
+                    <li class="nav-item spe">
+                        <a class="nav-link" href="#" id="hdcn">Hướng dẫn Chức năng</a>
+                        <ul class="nav flex-column " id="qlul">
+                            <li class="nav-item ql-li">
+                                <a class="nav-link " href="../html/lhdm.html">lập hóa đơn mới</a>
+                            </li>
+                            <li class="nav-item ql-li">
+                                <a class="nav-link" href="../html/qlsp.html">Quản lý sản phẩm</a>
+                            </li>
+                            <li class="nav-item ql-li">
+                                <a class="nav-link" href="../html/qlkh.html">Quản lý khách hàng</a>
+                            </li>
+                            <li class="nav-item ql-li">
+                                <a class="nav-link" href="../html/qlnv.html">Quản lý Nhân viên</a>
+                            </li>
+                            <li class="nav-item ql-li">
+                                <a class="nav-link" href="../html/qlhd.html">Quản lý hóa đơn</a>
+                            </li>
+                            <li class="nav-item ql-li">
+                                <a class="nav-link" href="../html/thongke.html">Thống kê</a>
+                            </li>
+                            <li class="nav-item ql-li">
+                                <a class="nav-link" href="../html/saoluu.html">Sao lưu dữ liệu</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-9 chung">
+                <div>
+                    <p class="title-inside">. Một số thông tin cơ bản về phần mềm:</p>
+                    <img src="../img/trangChu.png" class="img-in-main" alt="">
+                    <div class="h1-title-main">hình ảnh trang chủ của phầm mềm</p>
+                    </div>
+
+                    <div>
+                        <p class="title-inside">. Công nghệ sử dụng:</p>
+                        <div style="margin-left: 40px;">
+                            <p>Ngôn ngữ lập trình phần mềm: Java</p>
+                            <p>Hệ quản trị cơ sở dữ liệu:Microsoft SQL server</p>
+                            <p>Kiến trúc: cơ bản</p>
+                        </div> 
+                    </div>
+                    <div>
+                        <p class="title-inside">. Hệ điều hành:</p>
+                        <p>Windows 10</p>
+                    </div>
+                    <div>
+                        <p class="title-inside">. Cấu hình phần cứng yêu cầu:</p>
+                        <p>CPU: Intel core i5 trở lên
+                        </p>
+                        <p> RAM: tối thiểu 4GB</p>
+                        <p>màn hình full-hd.</p>
+                    </div>
+                    <div class="blockS">
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <script>
+            let hdcn = document.getElementById("hdcn");
+            let qlul = document.getElementById("qlul");
+            qlul.style.display = 'none';
+            hdcn.addEventListener("click", () => {
+                if (qlul.style.display != 'none')
+                    qlul.style.display = 'none';
+                else
+                    qlul.style.display = 'block';
+                console.log(`done`);
+            });
+        </script>
+
+</body>
+
+</html>
